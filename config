@@ -1,0 +1,16 @@
+#
+# Add the module below to i3 config file 
+#
+
+[module/spotify]
+ 11 type = custom/script
+ 10 interval = 1
+  9 format-prefix = " "
+  8 format-prefix-foreground = #1db954
+  7 format = <label>
+  6 format-foreground = #81a2be
+  5 exec = $HOME/Codes/sp current | tail -2 | sed -e 's/  */ /g' | cut -d ' ' -f2- | sed 'N;s/\n/ - /' | fmt -w 50  
+  4 ;format-underline = #1db954
+  3 click-left = "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+  2 click-right= "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
+  
