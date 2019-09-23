@@ -1,5 +1,5 @@
 #
-# Add the module below to i3 config file 
+# Add the module below to polybar config file 
 #
 
 [module/spotify]
